@@ -1,8 +1,11 @@
 import os 
 from zipfile import ZipFile 
-
+import sys
+sys.path.insert(0,'./.history')
+from history import SaveHistory
 
 def extractZipFile(fileName):
+    SaveHistory(fileName)
     zip = ZipFile(fileName,'r')
     
     print("\nAll files :-")
